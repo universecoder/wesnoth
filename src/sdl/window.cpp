@@ -57,6 +57,9 @@ window::window(const std::string& title,
 	// Use linear scaling when rendering, if applicable.
 	SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "linear");
 
+	// Enable 3D rendering for the window surface. Not sure if this really does anything.
+	SDL_SetHint(SDL_HINT_FRAMEBUFFER_ACCELERATION, "1");
+
 	pixel_format_ = info.texture_formats[0];
 
 	fill(0,0,0);
